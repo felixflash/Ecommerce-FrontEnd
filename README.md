@@ -7,8 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Prerequisites
 React
+<br>
 Firebase
+<br>
 Bootstrap 5
+<br>
 FontAwesome
 
 
