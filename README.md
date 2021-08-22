@@ -1,7 +1,12 @@
 
+
+                           READ FIRST
+
 Prerequisites : FontAwesome , Bootstrap , React and some components along with firebase.
 
-make sure you run <em>npm install</em> to install all these dependencies for this project to run
+Make sure you run     <em>npm install</em>    to install all these dependencies for this project to run.
+
+Use     <em>npm start </em>  to run
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
