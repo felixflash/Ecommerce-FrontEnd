@@ -5,6 +5,57 @@
     padding: 0;
 }
 
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .form-control-dark {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: var(--bs-gray);
+  }
+  .form-control-dark:focus {
+    color: #fff;
+    background-color: var(--bs-dark);
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
+  .text-small {
+    font-size: 85%;
+  }
+  
+  .dropdown-toggle {
+    outline: 0;
+  }
+  
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+
+
+
 .wrapper {
     overflow-x: hidden;
     overflow-y: auto;
@@ -31,72 +82,7 @@ body {
     
 }
 
-/* navbar */
-.navbox {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(18, 8, 78);
-    align-items: center;
-    padding: 30px;
-}
-
-
-
-
-
-.navbox .leftside {
-    width: 80px;
-    height: 80px;
-    
-}
-
- .navbox .rightside .addproducts{
-
-    position: absolute;
-    right: 700px;
-    
-}
-
-
-.navbox .rightside .user{
-
-    position: absolute;
-    right: 150px;
-    white-space: pre-wrap;
-    
-}
-
-.navbox .rightside .carticon{
-
-    position: absolute;
-    right: 100px;
-    
-}
-.navbox .rightside .cartvalue{
-
-    position: absolute;
-    right: 65px;
-    top: -5px;
-    
-}
-a{
-    color: darkred;
-}
-
-.navbox .leftside img {
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.navbox .rightside {
-    font-size: 16px;
-    font-weight: 600;
-    position: absolute;
-    padding: 10px;
-    right: 10px;
-}
+/* Header / Navbar */
 
 
 
@@ -123,26 +109,71 @@ a{
     color: rgb(255, 255, 255);
 }
 
-
-
-    
-
-.navbox .rightside .no-of-products {
-    background: #f10a63;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 2px;
-    width: 14px;
-    height: 14px;
-    border-radius: 3px;
-    position: absolute;
-    top: -5px;
-    left: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.rightside-logout{
+    position: relative;
+    left: 490px;
+    top: 4px;
 }
+
+.rightside-user{
+    position: relative;
+    left: 520px;
+    top: 4px;
+    color: aqua;
+}
+
+.rightside-user span{
+    position: relative;
+    left: 65px;
+    bottom: 27px;
+    
+}
+
+
+.text-position1{
+    position: relative;
+    left: 20px;
+    top: 2px;
+    font-weight: 500;
+    color: darksalmon;
+}
+.text-position2 {
+    position: relative;
+    left: 120px;
+    top: 4px;
+   
+    font-size: 5px;
+ 
+}
+
+
+.rightside-user .nav-link{
+    color: rgb(255, 9, 214);
+}
+
+.rightside-carticon{
+    position: relative;
+    left: 540px;
+    top: 2px;
+}
+
+.rightside-cartvalue{
+    position: relative;
+    left: 540px;
+  
+}
+
+.rightside-cartvalue .no-of-products{
+    color: #face09;
+  
+}
+.search{
+
+    position: relative;
+    left: 400px; 
+    top: 4px; 
+}  
+
 
 .logout-btn {
     padding: 5px;
@@ -511,7 +542,12 @@ h5 {
     margin: 20px 0 12px;
     padding: 0;
   }
-  
+
+  .footer .menu p{
+    position: relative;
+    left: 25px;
+  }
+
   .footer .menu a {
     display: inline-block;
     line-height: 1.8;
@@ -552,38 +588,44 @@ h5 {
     }
   }
 
-  /* carousel  */
+  /* carousel  Section */
 
 #caros {
-    display: inline-block;
-   width: 80%;
+ display: inline-block;
+  width:100%;
   position: relative;
-  left: 170px;
+  left: 20px;
   text-align: center;
-  background-color:#343435d0;
-  
-}
-
-#caros .carousel-item{
-   
-  position: relative;
-  left: 280px;
-  top: 30px;
-  text-align: center;
+  padding: 1% 18%;
  
   
 }
+#caros .container {
+    text-align: center;
+}
 
 
-#caros .caro-text{
-   
+
+#caros h3 {
+    color: rgb(255, 255, 255);
     position: relative;
-    right: 290px;
-    bottom: 15px;
-    color: white;
-    padding: 10px;
+   left: 200px;
+     
+   }
+
+   #caros .caro-imageone {
     
-} 
+    position: relative;
+    left: 200px;
+
+     
+   }
+   #caros p {
+    color: rgb(255, 230, 8);
+    position: relative;
+    left: 200px;
+     
+   }
 
 
 hr{
@@ -595,14 +637,7 @@ hr{
 }
 
 
-#caros .caro-text h5{
-   
-    position: relative;
-  
-    top: 11px;
-    color: rgb(255, 208, 0);
-    
-}  
+
 
 
 

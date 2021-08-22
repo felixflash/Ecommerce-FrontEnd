@@ -1,69 +1,51 @@
 import React, { useContext } from 'react'
 import { ProductsContext } from '../Global/ProductsContext'
 import { CartContext } from '../Global/CartContext'
+import CarouselContainer from './CarouselContainer'
 
 
 
 export const Products = () => {
-
+  
+  const { dispatch } = useContext(CartContext);
     const { products } = useContext(ProductsContext);
-
-    const { dispatch } = useContext(CartContext);
+   
+    
 
     return (
        
-        <>                    { /* carousel Section */}
-        <section id="caros">
-        <div id="caro-carousel " class="carousel slide" data-bs-ride="carousel">
-        <button type="button" data-bs-target="#caro-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#caro-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#caro-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img  className="caro-image" src="https://www.notebookcheck.net/fileadmin/Notebooks/Lenovo/Yoga_720-13IKB/i5-8250U/4zu3_Lenovo_Yoga_720_13IKB.jpg" class="d-block w-50" alt="laptop"/>
-      <div class="caro-text">
-      <strong><h5>Laptops</h5></strong>
-      <hr></hr>
-        <p>Quality And affordable Products.</p>
-      
-      </div>
-      
-    </div>
-    <div class="carousel-item">
-      <img className="caro-image" src="https://cdn.shopify.com/s/files/1/0022/6728/3545/products/iPhone_6s_-_Space_Grey_dc89827a-529c-4f2a-8f9a-7d523f8b245b_2000x.png?v=1578414793" class="d-block w-50" alt="phone"/>
-      <div class="caro-text">
-        <h5>Phones</h5>
-        <p>Look no where for the Best.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img  className="caro-image" src="https://cdn.vox-cdn.com/thumbor/bRX-3rGxrIJwbIwiKu7EGKCCuhE=/0x0:2000x1126/1200x800/filters:focal(840x403:1160x723)/cdn.vox-cdn.com/uploads/chorus_image/image/63108794/IdeaPad_S540___6.0.png" class="d-block w-50" alt="laptop"/>
-      <div class="caro-text">
-        <h4>Laptops</h4>
-        <em><h4>It's all About You.</h4></em>
-      </div>
-    </div>
+        <>                   
+        <div class="card text-center">   { /* Featured Section */}
+  <div class="card-body">
+    <h5 class="card-title">The Best Online Shop at the Moment</h5>
+    <a href="#ProductsSection" class="btn btn-primary">Featured Products</a>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#caro-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#caro-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  
+</div>
 
-
-</section>
-
-<br></br>
+        <CarouselContainer />    { /* carousel Section */}
        
+   
+        { /* Products Section */}
+
+        <div class="card text-center">
+  <div class="card-body bg-secondary">
+    <h5 class="card-title text-light">Start Shopping Now with Us</h5>
+    <a href="#ProductsSection" class="btn btn-primary"> Products Section</a>
+  </div>
+  
+</div>
+
+
+
 
 { /* Product Section */}
+        <section id = "ProductsSection">
+          
         
             <div className='products-container bg-light'>
-                {products.length === 0 && <div>Loading..</div>}
+                {products.length === 0 && <div><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+<span class="sr-only">Loading...</span></div>}
                 {products.map(product => (
                     <div className='product-card' key={product.ProductID}>
                         <div className='product-img'>
@@ -80,7 +62,9 @@ export const Products = () => {
                 ))}
             </div>
 
- 
+            </section>
+
+
 
                                      { /* Footer Section */}
             <footer class="footer">
@@ -115,7 +99,9 @@ export const Products = () => {
     <img className="img-footer " src="https://image.flaticon.com/icons/png/512/4290/4290854.png" alt="" width="100" height="100" class="d-inline-block align-text-top"/>
     
     <br></br>
-    <p><h5> 2021 </h5></p>
+    <br></br>
+    <br></br>
+    <p><h5> © 2021 </h5></p>
   </p>
     
    
