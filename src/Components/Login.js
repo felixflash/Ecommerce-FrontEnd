@@ -18,8 +18,19 @@ export const Login = (props) => {
         }).catch(err => setError(err.message));
     }
 
-    return (
-        <div class="bg-secondary p-5 text-dark bg-opacity-25">
+    return ( 
+    
+    
+   
+    
+    
+    <section id="logincontainer"> 
+
+        <div className="Loginbgimg">
+    <img src="https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg" alt="bacgroundimage"/>
+    </div>
+
+        <div class="bg-dark p-5 text-dark bg-opacity-25">
         <div className='container bg-dark text-light'>
             <br />
             <img class="mb-4" src="https://image.flaticon.com/icons/png/512/4290/4290854.png" alt="" width="50" height="50" />
@@ -44,6 +55,9 @@ export const Login = (props) => {
             <a href="signup">Don't have an account at I-sell? Register <span>Here</span></a> 
             
         </div>
+     
         </div>
-    )
+        </section>
+        
+        )
 }

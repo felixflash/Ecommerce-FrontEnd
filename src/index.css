@@ -5,12 +5,49 @@
     padding: 0;
 }
 
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+.Loginbgimg{
+  position: absolute;
+  width: 100%;
+  height: 100%px;
+  z-index: -1;
+  right: 890px;
+ bottom: -40px;
+  
+}
+.Signupbgimg{
+  position: absolute;
+  width: 100%;
+  height: 800%px;
+  z-index: -1;
+  right: 860px;
+ bottom: -50px;
+  
+}
+.Addproductbgimg{
+  position: absolute;
+  width: 100%;
+  height: 100%px;
+  z-index: -1;
+  right: 890px;
+ bottom: -40px;
+  
+}
+
+
+#logincontainer{
+  width:35%;
+  padding: 2%;
+  position: absolute;
+  left: 500px;
+  bottom: 40px;
+ }
+ 
+#signupcontainer {
+   width:40%;
+   padding: 4%;
+   position: relative;
+   left: 450px;
+  bottom: 40px;
   }
   
   .form-control-dark {

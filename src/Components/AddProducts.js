@@ -50,7 +50,13 @@ export const AddProducts = () => {
     }
 
     return (
-        <div class="bg-secondary p-5 text-dark bg-opacity-25">
+
+        <section id="logincontainer">
+        <div class="bg-dark p-5 text-dark bg-opacity-25">
+        <div className="Addproductbgimg">
+    <img src="https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg" alt="bacgroundimage"/>
+    </div>
+
         <div className='container bg-dark text-light'>
             <br />
             <img class="mb-4" src="https://image.flaticon.com/icons/png/512/4290/4290854.png" alt="" width="50" height="50" />
@@ -74,5 +80,6 @@ export const AddProducts = () => {
             {error && <span className='error-msg'>{error}</span>}
         </div>
         </div>
+        </section>
     )
 }
