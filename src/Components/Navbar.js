@@ -58,43 +58,54 @@ export const Navbar = ({ user }) => {
             </div>
           </ul>
 
-          <form className="search col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-            <input
-              type="search"
-              className="form-control form-control-dark"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-          </form>
+          <div className="p-3 bg-dark text-white">
+            <div className=" nav  container ">
+              <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a
+                  href="/"
+                  className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+                >
+                  <img
+                    className="imgclass "
+                    src="https://image.flaticon.com/icons/png/512/4290/4290854.png"
+                    alt=""
+                    width="50"
+                    height="50"
+                    class="d-inline-block align-text-top"
+                  />
+                </a>
 
-          <div className="rightside-logout">
-            <button
-              type="button"
-              class="btn btn-outline-light me-2"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </div>
+                <div className="rightside-logout">
+                  <button
+                    type="button"
+                    class="btn btn-outline-light me-2"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </div>
 
-          <div className="rightside-user">
-            <button
-              type="button"
-              class="btn btn-primary btn-md position-relative"
-            >
-              {user}
-              <span class="position-absolute top-1 right-30 start-100 translate-middle p-2 bg-danger border border-danger rounded-circle"></span>
-            </button>
-          </div>
+                <div className="rightside-user">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-md position-relative"
+                  >
+                    {user}
+                    <span class="position-absolute top-1 right-30 start-100 translate-middle p-2 bg-danger border border-danger rounded-circle"></span>
+                  </button>
+                </div>
 
-          <div className="rightside-carticon">
-            <a href="cartproducts" className="nav-link px-2 text-white">
-              <Icon icon={cart} />
-            </a>
-          </div>
-          <div className="rightside-cartvalue">
-            <div className="cartvalue">
-              <span className="no-of-products">{totalQty.length}</span>
+                <div className="rightside-carticon">
+                  <a href="cartproducts" className="nav-link px-2 text-white">
+                    <Icon icon={cart} />
+                  </a>
+                </div>
+                <div className="rightside-cartvalue">
+                  <div className="cartvalue">
+                    <span className="no-of-products">{totalQty.length}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
