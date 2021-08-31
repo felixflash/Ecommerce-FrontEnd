@@ -13,9 +13,15 @@ export const CartReducer = (state, action) => {
 
   switch (action.type) {
     case "ADD_TO_CART":
-      const check = shoppingCart.find(
-        (product) => product.ProductID === action.id
-      );
+      let cart = JSON.parse(localStorage.getItem("cart"));
+
+      // const check = shoppingCart.find(
+      //   (product) => product.ProductID === action.id
+
+      // );
+
+      const check = cart.find((product) => product.ProductID === action.id);
+
       if (check) {
         toast.info("this product is already in your cart", {
           position: "top-right",
@@ -33,13 +39,12 @@ export const CartReducer = (state, action) => {
         product["TotalProductPrice"] = product.ProductPrice * product.qty;
         updatedQty = totalQty + 1;
         updatedPrice = totalPrice + product.ProductPrice;
-        localStorage.setItem(
-          "cart",
-          JSON.stringify([product, ...shoppingCart])
-        );
+
         let cart = JSON.parse(localStorage.getItem("cart"));
         const _updatedPrice = JSON.parse(localStorage.getItem("totalPrice"));
         const _updatedQty = JSON.parse(localStorage.getItem("updatedQty"));
+
+        localStorage.setItem("cart", JSON.stringify([...cart, product]));
 
         localStorage.setItem(
           "totalPrice",
@@ -96,16 +101,24 @@ export const CartReducer = (state, action) => {
       //     (product) => product.ProductID !== action.id
       //   );
       product = action.cart;
-      updatedQty = totalQty - product.qty;
-      updatedPrice = totalPrice - product.qty * product.ProductPrice;
+      // updatedQty = totalQty - product.qty;
+      // updatedPrice = totalPrice - product.qty * product.ProductPrice;
 
-      const cart = JSON.parse(localStorage.getItem("cart"));
-      const filtered = cart.filter(
+      const _cart = JSON.parse(localStorage.getItem("cart"));
+      const filtered = _cart.filter(
         (product) => product.ProductID !== action.id
       );
 
-      console.log(product);
+      const _updatedPrice = JSON.parse(localStorage.getItem("totalPrice"));
+      const _updatedQty = JSON.parse(localStorage.getItem("updatedQty"));
 
+      updatedQty = _updatedQty - product.qty;
+      updatedPrice = _updatedPrice - product.qty * product.ProductPrice;
+
+      localStorage.setItem("totalPrice", JSON.stringify(updatedPrice));
+      localStorage.setItem("totalQty", JSON.stringify(updatedQty));
+      localStorage.setItem("cart", JSON.stringify([...filtered]));
+      // window.location.reload();
       return {
         shoppingCart: [...filtered],
         totalPrice: updatedPrice,
@@ -114,6 +127,9 @@ export const CartReducer = (state, action) => {
       break;
 
     case "EMPTY":
+      localStorage.setItem("cart", JSON.stringify([]));
+      localStorage.setItem("totalPrice", 0);
+      localStorage.setItem("totalQty", 0);
       return {
         shoppingCart: [],
         totalPrice: 0,

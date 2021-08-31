@@ -61,20 +61,6 @@ export const Navbar = ({ user }) => {
           <div className="p-3 bg-dark text-white">
             <div className=" nav  container ">
               <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a
-                  href="/"
-                  className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-                >
-                  <img
-                    className="imgclass "
-                    src="https://image.flaticon.com/icons/png/512/4290/4290854.png"
-                    alt=""
-                    width="50"
-                    height="50"
-                    class="d-inline-block align-text-top"
-                  />
-                </a>
-
                 <div className="rightside-logout">
                   <button
                     type="button"
