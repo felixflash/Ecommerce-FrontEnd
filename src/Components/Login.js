@@ -20,7 +20,7 @@ export const Login = (props) => {
   };
 
   React.useEffect(() => {
-    localStorage.setItem("cart", []);
+    localStorage.setItem("cart", JSON.stringify([]));
     localStorage.setItem("totalPrice", 0);
     localStorage.setItem("totalQty", 0);
   });
