@@ -535,7 +535,7 @@ position: relative;
   }
   
   .footer .footer-center i {
-    background-color: #33383b;
+    background-color: #232425;
     color: #ffffff;
     font-size: 25px;
     width: 38px;
@@ -648,15 +648,18 @@ position: relative;
  display: inline-block;
   width:100%;
   position: relative;
-  left: 20px;
-  text-align: center;
-  padding: 1% 18%;
+  left: 40px;
+  padding: 5% 25%;
+
  
   
 }
-#caros .container {
-    text-align: center;
+.container .caro-image{
+    
+  position: absolute;
+  right: 500px;
 }
+
 
 
 
@@ -667,13 +670,6 @@ position: relative;
      
    }
 
-   #caros .caro-imageone {
-    
-    position: relative;
-    left: 200px;
-
-     
-   }
    #caros p {
     color: rgb(255, 230, 8);
     position: relative;

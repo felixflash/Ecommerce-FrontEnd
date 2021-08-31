@@ -27,15 +27,7 @@ export const Products = () => {
         <CarouselContainer />    { /* carousel Section */}
        
    
-        { /* Products Section */}
 
-        <div class="card text-center">
-  <div class="card-body bg-secondary">
-    <h5 class="card-title text-light">Start Shopping Now with Us</h5>
-    <a href="#ProductsSection" class="btn btn-primary"> Products Section</a>
-  </div>
-  
-</div>
 
 
 
