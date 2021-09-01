@@ -33,7 +33,6 @@ export const Cashout = (props) => {
           .onSnapshot((snapshot) => {
             setName(snapshot.data().Name);
             setEmail(snapshot.data().Email);
-            setBtnText("MetaMask Connected");
           });
       } else {
         history.push("/login");
@@ -165,49 +164,6 @@ export const Cashout = (props) => {
 
   return (
     <>
-      {/* <Navbar user={props.user} />
-
-            <section id="Cashoutcontainer">
-            <div class="bg-dark p-3 text-light bg-opacity-25">
-            <div className="Addproductbgimg">
-    <img src="https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg" alt="bacgroundimage"/>
-    </div>
-            <div className='container'>
-                <br />
-                <h2>Cashout Details</h2>
-                <br />
-                {successMsg && <div className='success-msg'>{successMsg}</div>}
-                <form autoComplete="off" className='form-group' onSubmit={cashoutSubmit}>
-                    <label htmlFor="name">Name</label>
-                    <input type="text" className='form-control' required
-                        value={name} disabled />
-                    <br />
-                    <label htmlFor="email">Email</label>
-                    <input type="email" className='form-control' required
-                        value={email} disabled />
-                    <br />
-                    <label htmlFor="Cell No">Cell No</label>
-                    <input type="number" className='form-control' required
-                        onChange={(e) => setCell(e.target.value)} value={cell} placeholder='eg 03123456789' />
-                    <br />
-                    <label htmlFor="Delivery Address">Delivery Address</label>
-                    <input type="text" className='form-control' required
-                        onChange={(e) => setAddress(e.target.value)} value={address} />
-                    <br />
-                    <label htmlFor="Price To Pay">Price To Pay</label>
-                    <input type="number" className='form-control' required
-                        value={totalPrice} disabled />
-                    <br />
-                    <label htmlFor="Total No of Products">Total No of Products</label>
-                    <input type="number" className='form-control' required
-                        value={totalQty} disabled />
-                    <br />
-                    <h4><button type="submit" className='badge badge-success btn-lg '>SUBMIT</button></h4>
-                </form>
-                {error && <span className='error-msg'>{error}</span>}
-            </div>
-            </div>
-            </section> */}
       <div className="container">
         <main>
           <div className="py-5 text-center">
@@ -218,7 +174,7 @@ export const Cashout = (props) => {
             <div className="col-md-5 col-lg-4 order-md-last">
               <h4 className="d-flex justify-content-between align-items-center mb-3">
                 <span className="text-muted">Your cart</span>
-                <span className="badge bg-secondary rounded-pill">
+                <span className="badge bg-primary rounded-pill">
                   {totalQty}
                 </span>
               </h4>
@@ -325,7 +281,7 @@ export const Cashout = (props) => {
                   }
                   onClick={handleWalletConnection}
                 >
-                  {!!btnText ? btnText : "  ⚠ Connect Wallet"}
+                  {!!btnText ? btnTe : "  ⚠ Connect Wallet"}
                 </small>
 
                 <div className="my-3">
