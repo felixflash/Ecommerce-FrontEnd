@@ -3,6 +3,7 @@ import { auth, db } from '../Config/Config'
 import { CartContext } from '../Global/CartContext'
 import { Navbar } from './Navbar';
 import { useHistory } from 'react-router-dom'
+import SimplePopover from './Popup';
 
 
 export const Cashout = (props) => {
@@ -98,12 +99,17 @@ export const Cashout = (props) => {
                     <input type="number" className='form-control' required
                         value={totalQty} disabled />
                     <br />
+                    
+                     <SimplePopover /> {/* Dispute Section */}
+     
                     <h4><button type="submit" className='badge badge-success btn-lg '>SUBMIT</button></h4>
                 </form>
                 {error && <span className='error-msg'>{error}</span>}
             </div>
             </div>
             </section>
+
+              
         </>
     )
 }

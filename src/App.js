@@ -11,6 +11,8 @@ import { Cart } from "./Components/Cart";
 import { AddProducts } from "./Components/AddProducts";
 import { Cashout } from "./Components/Cashout";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Products } from "./Components/Products";
+
 
 export class App extends Component {
   state = {
@@ -60,6 +62,12 @@ export class App extends Component {
                 component={() => <Cart user={this.state.user} />}
               />
               {/* add products */}
+              
+              <Route path="/products"
+                component= {Products} />
+
+             
+              
               <Route path="/addproducts" component={AddProducts} />
               {/* cashout */}
               <Route
