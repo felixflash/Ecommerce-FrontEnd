@@ -51,7 +51,7 @@ export const AddProducts = () => {
 
     return (
 
-        <section id="logincontainer">
+        <section id="Addcontainer">
         <div class="bg-dark p-5 text-dark bg-opacity-25">
         <div className="Addproductbgimg">
     <img src="https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg" alt="bacgroundimage"/>

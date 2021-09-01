@@ -34,6 +34,54 @@
 }
 
 
+.Cashoutbgimg{
+  position: absolute;
+  width: 100%;
+  height: 100%px;
+  z-index: -1;
+  right: 890px;
+ bottom: -40px;
+  
+}
+.cartlistbgimg{
+  position: absolute;
+  width: 100%;
+  height: 100%px;
+  z-index: -1;
+  right: 550px;
+ bottom: -170px;
+  
+}
+
+
+
+
+#cartlistcontainer{
+  width:70%;
+  padding: 2%;
+  position: absolute;
+  left: 250px;
+  top: 100px;
+ }
+
+
+#Addcontainer{
+  width:35%;
+  padding: 2%;
+  position: absolute;
+  left: 500px;
+  bottom: 40px;
+ }
+
+
+#Cashoutcontainer{
+  width:35%;
+  padding: 4%;
+  position: absolute;
+  left: 500px;
+  top: 70px;
+ }
+
 #logincontainer{
   width:35%;
   padding: 2%;
@@ -197,7 +245,8 @@ body {
 
 .rightside-cartvalue{
     position: relative;
-    left: 540px;
+    left: 535px;
+    top: -5px;
   
 }
 
