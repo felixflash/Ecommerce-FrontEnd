@@ -7,6 +7,7 @@ import { BNBAbi } from "../Config/BNBAbi";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SimplePopover from "./Popup";
 
 export const Cashout = (props) => {
   const history = useHistory();
@@ -164,6 +165,7 @@ export const Cashout = (props) => {
 
   return (
     <>
+      <SimplePopover /> {/* Dispute Section */}
       <div className="container">
         <main>
           <div className="py-5 text-center">
