@@ -3,12 +3,14 @@ import { ProductsContext } from "../Global/ProductsContext";
 import { CartContext } from "../Global/CartContext";
 import CarouselContainer from "./CarouselContainer";
 
+
 export const Products = () => {
   const { dispatch } = useContext(CartContext);
   const { products } = useContext(ProductsContext);
 
   return (
     <>
+      
       <div class="card text-center">
         {" "}
         {/* Featured Section */}
@@ -118,6 +120,14 @@ export const Products = () => {
           </div>
         </div>
       </div>
+
+         {/* Dispute Section */}
+         <section id="DisputeSection">
+      <div className="ReturnButton">
+      <button className="btn btn-danger text-center" type="submit">File A Dispute</button>
+      </div>
+      </section>
+
       {/* Footer Section */}
       <footer class="footer">
         <hr></hr>
