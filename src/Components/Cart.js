@@ -26,15 +26,16 @@ export const Cart = ({ user }) => {
   return (
     <>
       <Navbar user={user} />
+
       <>
-        {shoppingCart.length !== 0 && (
-          <h5>
-            <badge className="badge badge-pill bg-dark text-center text-light">
-              Cart
-            </badge>
-          </h5>
-        )}
-        <div className="cart-container">
+      <section id="cartlistcontainer">
+      <div className="cartlistbgimg">
+        <img
+          src="https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg"
+          alt="bacgroundimage"
+        />
+      </div>
+        <div className="cart-container bg-white text-light">
           {shoppingCart.length === 0 && (
             <>
               <div>
@@ -48,19 +49,19 @@ export const Cart = ({ user }) => {
           )}
           {shoppingCart &&
             shoppingCart.map((cart) => (
-              <div className="cart-card" key={cart.ProductID}>
+              <div className="cart-card bg-danger" key={cart.ProductID}>
                 <div className="cart-img">
                   <img src={cart.ProductImg} alt="not found" />
                 </div>
 
                 <div className="cart-name">{cart.ProductName}</div>
 
-                <div className="cart-price-orignal">
+                <div className="cart-price-orignal text-light">
                   GH₵ {cart.ProductPrice}.00
                 </div>
 
                 <div
-                  className="inc"
+                  className="inc text-warning"
                   onClick={() =>
                     dispatch({ type: "INC", id: cart.ProductID, cart })
                   }
@@ -71,7 +72,7 @@ export const Cart = ({ user }) => {
                 <div className="quantity">{cart.qty}</div>
 
                 <div
-                  className="dec"
+                  className="dec text-warning"
                   onClick={() =>
                     dispatch({ type: "DEC", id: cart.ProductID, cart })
                   }
@@ -79,12 +80,12 @@ export const Cart = ({ user }) => {
                   <Icon icon={ic_remove} size={24} />
                 </div>
 
-                <div className="cart-price">
+                <div className="cart-price text-light">
                   GH₵ {cart.TotalProductPrice}.00
                 </div>
 
                 <button
-                  className="delete-btn"
+                  className="delete-btn text-light"
                   onClick={() =>
                     dispatch({ type: "DELETE", id: cart.ProductID, cart })
                   }
@@ -117,6 +118,7 @@ export const Cart = ({ user }) => {
             </div>
           )}
         </div>
+        </section>
       </>
     </>
   );

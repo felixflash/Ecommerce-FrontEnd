@@ -62,7 +62,12 @@ export const Cashout = (props) => {
     return (
         <>
             <Navbar user={props.user} />
-            <div class="bg-secondary p-5 text-light bg-opacity-25">
+
+            <section id="Cashoutcontainer">
+            <div class="bg-dark p-3 text-light bg-opacity-25">
+            <div className="Addproductbgimg">
+    <img src="https://iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg" alt="bacgroundimage"/>
+    </div>
             <div className='container'>
                 <br />
                 <h2>Cashout Details</h2>
@@ -98,6 +103,7 @@ export const Cashout = (props) => {
                 {error && <span className='error-msg'>{error}</span>}
             </div>
             </div>
+            </section>
         </>
     )
 }
