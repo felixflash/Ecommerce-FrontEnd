@@ -111,7 +111,7 @@ export const Cart = ({ user }) => {
                     className="badge text-light btn-lg badge-secondary badge-pill"
                     style={{ marginTop: 5 + "px" }}
                   >
-                    Cash on delivery
+                    Go to Checkout
                   </button>
                 </h4>
               </Link>
