@@ -42,8 +42,9 @@ export const Cashout = (props) => {
   });
 
   const cashoutSubmit = (e) => {
-    checkoutPayment();
     e.preventDefault();
+    checkoutPayment();
+
     auth.onAuthStateChanged((user) => {
       if (user) {
         const date = new Date();
@@ -125,6 +126,7 @@ export const Cashout = (props) => {
       .then((response) => {
         alert("Wallet connected successfully!");
         window.location.reload();
+        setBtnText("MetaMask Connected");
       })
       .then(() => setBtnText("MetaMask Connected"))
       .catch((error) => {
@@ -135,7 +137,7 @@ export const Cashout = (props) => {
 
   const checkoutPayment = () => {
     let amount = ethers.utils.parseEther("0.5");
-
+    console.log(vendor, amount);
     BNBContract.transfer(vendor, amount)
       .then((res) => {
         console.log(res);

@@ -5,7 +5,6 @@ import { Icon } from "react-icons-kit";
 import { cart } from "react-icons-kit/entypo/cart";
 import { useHistory } from "react-router-dom";
 
-
 export const Navbar = ({ user }) => {
   const history = useHistory();
   // const { totalQty } = useContext(CartContext);
@@ -32,7 +31,6 @@ export const Navbar = ({ user }) => {
               alt=""
               width="50"
               height="50"
-              class="d-inline-block align-text-top"
             />
           </a>
 
